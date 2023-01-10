@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C82296E269300ECE91A /* AppDelegate.swift */; };
+		FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C84296E269300ECE91A /* SceneDelegate.swift */; };
+		FACC8C87296E269300ECE91A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C86296E269300ECE91A /* ViewController.swift */; };
+		FACC8C8A296E269300ECE91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACC8C88296E269300ECE91A /* Main.storyboard */; };
+		FACC8C8D296E269300ECE91A /* Ubicapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C8B296E269300ECE91A /* Ubicapp.xcdatamodeld */; };
+		FACC8C8F296E269600ECE91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACC8C8E296E269600ECE91A /* Assets.xcassets */; };
+		FACC8C92296E269600ECE91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACC8C90296E269600ECE91A /* LaunchScreen.storyboard */; };
+		FACC8C9D296E269600ECE91A /* UbicappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C9C296E269600ECE91A /* UbicappTests.swift */; };
+		FACC8CA7296E269600ECE91A /* UbicappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8CA6296E269600ECE91A /* UbicappUITests.swift */; };
+		FACC8CA9296E269600ECE91A /* UbicappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FACC8C99296E269600ECE91A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACC8C77296E269300ECE91A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACC8C7E296E269300ECE91A;
+			remoteInfo = Ubicapp;
+		};
+		FACC8CA3296E269600ECE91A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACC8C77296E269300ECE91A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACC8C7E296E269300ECE91A;
+			remoteInfo = Ubicapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FACC8C7F296E269300ECE91A /* Ubicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ubicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACC8C82296E269300ECE91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FACC8C84296E269300ECE91A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FACC8C86296E269300ECE91A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FACC8C89296E269300ECE91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FACC8C8C296E269300ECE91A /* Ubicapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ubicapp.xcdatamodel; sourceTree = "<group>"; };
+		FACC8C8E296E269600ECE91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FACC8C91296E269600ECE91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FACC8C93296E269600ECE91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACC8C98296E269600ECE91A /* UbicappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UbicappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACC8C9C296E269600ECE91A /* UbicappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappTests.swift; sourceTree = "<group>"; };
+		FACC8CA2296E269600ECE91A /* UbicappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UbicappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACC8CA6296E269600ECE91A /* UbicappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappUITests.swift; sourceTree = "<group>"; };
+		FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FACC8C7C296E269300ECE91A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACC8C95296E269600ECE91A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACC8C9F296E269600ECE91A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FACC8C76296E269300ECE91A = {
+			isa = PBXGroup;
+			children = (
+				FACC8C81296E269300ECE91A /* Ubicapp */,
+				FACC8C9B296E269600ECE91A /* UbicappTests */,
+				FACC8CA5296E269600ECE91A /* UbicappUITests */,
+				FACC8C80296E269300ECE91A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FACC8C80296E269300ECE91A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FACC8C7F296E269300ECE91A /* Ubicapp.app */,
+				FACC8C98296E269600ECE91A /* UbicappTests.xctest */,
+				FACC8CA2296E269600ECE91A /* UbicappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FACC8C81296E269300ECE91A /* Ubicapp */ = {
+			isa = PBXGroup;
+			children = (
+				FACC8C82296E269300ECE91A /* AppDelegate.swift */,
+				FACC8C84296E269300ECE91A /* SceneDelegate.swift */,
+				FACC8C86296E269300ECE91A /* ViewController.swift */,
+				FACC8C88296E269300ECE91A /* Main.storyboard */,
+				FACC8C8E296E269600ECE91A /* Assets.xcassets */,
+				FACC8C90296E269600ECE91A /* LaunchScreen.storyboard */,
+				FACC8C93296E269600ECE91A /* Info.plist */,
+				FACC8C8B296E269300ECE91A /* Ubicapp.xcdatamodeld */,
+			);
+			path = Ubicapp;
+			sourceTree = "<group>";
+		};
+		FACC8C9B296E269600ECE91A /* UbicappTests */ = {
+			isa = PBXGroup;
+			children = (
+				FACC8C9C296E269600ECE91A /* UbicappTests.swift */,
+			);
+			path = UbicappTests;
+			sourceTree = "<group>";
+		};
+		FACC8CA5296E269600ECE91A /* UbicappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FACC8CA6296E269600ECE91A /* UbicappUITests.swift */,
+				FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */,
+			);
+			path = UbicappUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FACC8C7E296E269300ECE91A /* Ubicapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACC8CAC296E269600ECE91A /* Build configuration list for PBXNativeTarget "Ubicapp" */;
+			buildPhases = (
+				FACC8C7B296E269300ECE91A /* Sources */,
+				FACC8C7C296E269300ECE91A /* Frameworks */,
+				FACC8C7D296E269300ECE91A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ubicapp;
+			productName = Ubicapp;
+			productReference = FACC8C7F296E269300ECE91A /* Ubicapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FACC8C97296E269600ECE91A /* UbicappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACC8CAF296E269600ECE91A /* Build configuration list for PBXNativeTarget "UbicappTests" */;
+			buildPhases = (
+				FACC8C94296E269600ECE91A /* Sources */,
+				FACC8C95296E269600ECE91A /* Frameworks */,
+				FACC8C96296E269600ECE91A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FACC8C9A296E269600ECE91A /* PBXTargetDependency */,
+			);
+			name = UbicappTests;
+			productName = UbicappTests;
+			productReference = FACC8C98296E269600ECE91A /* UbicappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FACC8CA1296E269600ECE91A /* UbicappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACC8CB2296E269600ECE91A /* Build configuration list for PBXNativeTarget "UbicappUITests" */;
+			buildPhases = (
+				FACC8C9E296E269600ECE91A /* Sources */,
+				FACC8C9F296E269600ECE91A /* Frameworks */,
+				FACC8CA0296E269600ECE91A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FACC8CA4296E269600ECE91A /* PBXTargetDependency */,
+			);
+			name = UbicappUITests;
+			productName = UbicappUITests;
+			productReference = FACC8CA2296E269600ECE91A /* UbicappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FACC8C77296E269300ECE91A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					FACC8C7E296E269300ECE91A = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					FACC8C97296E269600ECE91A = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = FACC8C7E296E269300ECE91A;
+					};
+					FACC8CA1296E269600ECE91A = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = FACC8C7E296E269300ECE91A;
+					};
+				};
+			};
+			buildConfigurationList = FACC8C7A296E269300ECE91A /* Build configuration list for PBXProject "Ubicapp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FACC8C76296E269300ECE91A;
+			productRefGroup = FACC8C80296E269300ECE91A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FACC8C7E296E269300ECE91A /* Ubicapp */,
+				FACC8C97296E269600ECE91A /* UbicappTests */,
+				FACC8CA1296E269600ECE91A /* UbicappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FACC8C7D296E269300ECE91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACC8C92296E269600ECE91A /* LaunchScreen.storyboard in Resources */,
+				FACC8C8F296E269600ECE91A /* Assets.xcassets in Resources */,
+				FACC8C8A296E269300ECE91A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACC8C96296E269600ECE91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACC8CA0296E269600ECE91A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FACC8C7B296E269300ECE91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACC8C8D296E269300ECE91A /* Ubicapp.xcdatamodeld in Sources */,
+				FACC8C87296E269300ECE91A /* ViewController.swift in Sources */,
+				FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */,
+				FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACC8C94296E269600ECE91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACC8C9D296E269600ECE91A /* UbicappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACC8C9E296E269600ECE91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACC8CA7296E269600ECE91A /* UbicappUITests.swift in Sources */,
+				FACC8CA9296E269600ECE91A /* UbicappUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FACC8C9A296E269600ECE91A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACC8C7E296E269300ECE91A /* Ubicapp */;
+			targetProxy = FACC8C99296E269600ECE91A /* PBXContainerItemProxy */;
+		};
+		FACC8CA4296E269600ECE91A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACC8C7E296E269300ECE91A /* Ubicapp */;
+			targetProxy = FACC8CA3296E269600ECE91A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FACC8C88296E269300ECE91A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACC8C89296E269300ECE91A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FACC8C90296E269600ECE91A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACC8C91296E269600ECE91A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FACC8CAA296E269600ECE91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FACC8CAB296E269600ECE91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FACC8CAD296E269600ECE91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ubicapp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Ubicapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FACC8CAE296E269600ECE91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ubicapp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Ubicapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FACC8CB0296E269600ECE91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.UbicappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ubicapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ubicapp";
+			};
+			name = Debug;
+		};
+		FACC8CB1296E269600ECE91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.UbicappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ubicapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ubicapp";
+			};
+			name = Release;
+		};
+		FACC8CB3296E269600ECE91A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.UbicappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ubicapp;
+			};
+			name = Debug;
+		};
+		FACC8CB4296E269600ECE91A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.UbicappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ubicapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FACC8C7A296E269300ECE91A /* Build configuration list for PBXProject "Ubicapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACC8CAA296E269600ECE91A /* Debug */,
+				FACC8CAB296E269600ECE91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACC8CAC296E269600ECE91A /* Build configuration list for PBXNativeTarget "Ubicapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACC8CAD296E269600ECE91A /* Debug */,
+				FACC8CAE296E269600ECE91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACC8CAF296E269600ECE91A /* Build configuration list for PBXNativeTarget "UbicappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACC8CB0296E269600ECE91A /* Debug */,
+				FACC8CB1296E269600ECE91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACC8CB2296E269600ECE91A /* Build configuration list for PBXNativeTarget "UbicappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACC8CB3296E269600ECE91A /* Debug */,
+				FACC8CB4296E269600ECE91A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FACC8C8B296E269300ECE91A /* Ubicapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FACC8C8C296E269300ECE91A /* Ubicapp.xcdatamodel */,
+			);
+			currentVersion = FACC8C8C296E269300ECE91A /* Ubicapp.xcdatamodel */;
+			path = Ubicapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FACC8C77296E269300ECE91A /* Project object */;
+}
