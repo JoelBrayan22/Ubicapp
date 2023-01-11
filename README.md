@@ -13,67 +13,47 @@ struct LocacionEntity {
 let id: Int
 let latitud: Double
 let longitud: Double
-}
-```
-> Usuario
-```swift
-struct UsuarioEntity {
-let id: Int
-let nombre: String
-}
-```
-> UbicacionMarcada
-```swift
-struct UbicacionMarcadaEntity {
-let id: Int
 let nombre: String
 let image: Binary Data
 }
-```
+
 
 ```swift
 class UbicacionMarcadaModel { 
-/// TODO: 1.- Creación del singleton para el acceso global
-///       2.- Instanciar a el Contenedor Persistente
-///       3.- Creación del singleton para el acceso global
+/// TODO:
+///       1.- importacion CoreData, Combine
+///       2.- Creación del singleton para el acceso global
+///       3.- Instanciar a el Contenedor Persistente
 ///       4.- Creación de la función para cargar la(s) ubicación(es) marcada(s).
 ///       5.- Creación de la función para añadir una nueva marca.
 ///       6.- Creación de la función para mandar una ubicación seleccionada.
+///       7.- Creación de la función para actualizar ubicaciòn selecionada
+///       8.- Creaciòn de los publishers a utilizar
           
-     func cargarUbicacionesMarcadas() { 
-      /// TODO:
-      }
+     static let shared UbicacionMarcadaModel ()
+     
+     var container: NSPersistentContainer = {
+     ///
+     }
+     
+      @Published var ubicacionesmarcadas: [LocacionEntity] = []
+      @Published var ubicacionmarcadaseleccionada: LocacionEntity?
       
-      func añadirMarcadorUbicacion(latitud: Double, longitud: Double, nombre: String) { 
-      /// TODO:
-      }
+      func cargarUbicacionesMarcadas() 
       
-      func ubicacionSeleccionada(id: Int) { 
-      ///TODO:
+      func añadirMarcadorUbicacion(latitud: Double, longitud: Double, nombre: String?)
+
+      func ubicacionSeleccionada(id: Int) 
       
-      }
+      func actualizarUbicacionMarcada(nombre: String?)
+      
 }
 ```
-
-```swift
-class UbicacionPersonaModel { 
-/// TODO: 1.- Creación del singleton para el acceso global
-///       2.- Instanciar a el Contenedor Persistente
-///       3.- Creacón del singleton para el acceso Global
-///       4.- Creación de la función para cargar la ubicación de la persona
-
-      func cargarUbicacionPersona() { 
-      /// TODO:
-      }
-
-}
-```
-
 
 # Ubicapp ViewModels
->Clase UbicacionPersonaViewModel
+>Clase MapaViewModel
 ```swift
-class UbicacionPersonaViewModel { 
+class MapaViewModel { 
 // TODO: cargar la ubicación de la persona 
 // Publicadores
 // Suscriptores
@@ -89,7 +69,7 @@ deinit() {
 }
 
 ```
->Clase UbicacionMarcadaViewModel
+>Clase DetallesUbicacionMarcadaViewModel
 ```swift
 class UbicacionMarcadaViewModel { 
 // TODO: cargar todas las ubicaciones
@@ -107,4 +87,8 @@ deinit() {
 }
 
 ```
+# Ubicapp Views
 
+>Clase MapaViewController
+
+>Clase DetallesMarcadorViewController
