@@ -58,9 +58,9 @@ class UbicacionMarcadaModel {
 ```swift
 class UbicacionPersonaModel { 
 /// TODO: 1.- Creación del singleton para el acceso global
-          2.- Instanciar a el Contenedor Persistente
-          3.- Creacón del singleton para el acceso Global
-          4.- Creación de la función para cargar la ubicación de la persona
+///       2.- Instanciar a el Contenedor Persistente
+///       3.- Creacón del singleton para el acceso Global
+///       4.- Creación de la función para cargar la ubicación de la persona
 
       func cargarUbicacionPersona() { 
       /// TODO:
