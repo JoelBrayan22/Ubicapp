@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA9437EB296F65C7008BD1CF /* GenerarCodigoQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9437EA296F65C7008BD1CF /* GenerarCodigoQR.swift */; };
+		FA9437EF296F6D74008BD1CF /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9437EE296F6D74008BD1CF /* QRViewController.swift */; };
 		FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C82296E269300ECE91A /* AppDelegate.swift */; };
 		FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C84296E269300ECE91A /* SceneDelegate.swift */; };
 		FACC8C87296E269300ECE91A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C86296E269300ECE91A /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA9437EA296F65C7008BD1CF /* GenerarCodigoQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerarCodigoQR.swift; sourceTree = "<group>"; };
+		FA9437EE296F6D74008BD1CF /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		FACC8C7F296E269300ECE91A /* Ubicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ubicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACC8C82296E269300ECE91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACC8C84296E269300ECE91A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			children = (
 				FACC8C82296E269300ECE91A /* AppDelegate.swift */,
 				FACC8C84296E269300ECE91A /* SceneDelegate.swift */,
+				FA9437EE296F6D74008BD1CF /* QRViewController.swift */,
+				FA9437EA296F65C7008BD1CF /* GenerarCodigoQR.swift */,
 				FACC8C86296E269300ECE91A /* ViewController.swift */,
 				FACC8C88296E269300ECE91A /* Main.storyboard */,
 				FACC8C8E296E269600ECE91A /* Assets.xcassets */,
@@ -264,7 +270,9 @@
 				FACC8C8D296E269300ECE91A /* Ubicapp.xcdatamodeld in Sources */,
 				FACC8C87296E269300ECE91A /* ViewController.swift in Sources */,
 				FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */,
+				FA9437EB296F65C7008BD1CF /* GenerarCodigoQR.swift in Sources */,
 				FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */,
+				FA9437EF296F6D74008BD1CF /* QRViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
