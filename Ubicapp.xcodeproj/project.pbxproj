@@ -101,9 +101,6 @@
 		FACC8C81296E269300ECE91A /* Ubicapp */ = {
 			isa = PBXGroup;
 			children = (
-				FACC8CB7296E278600ECE91A /* Models */,
-				FACC8CB6296E277D00ECE91A /* ViewModel */,
-				FACC8CB5296E277700ECE91A /* Views */,
 				FACC8C82296E269300ECE91A /* AppDelegate.swift */,
 				FACC8C84296E269300ECE91A /* SceneDelegate.swift */,
 				FACC8C86296E269300ECE91A /* ViewController.swift */,
@@ -131,27 +128,6 @@
 				FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */,
 			);
 			path = UbicappUITests;
-			sourceTree = "<group>";
-		};
-		FACC8CB5296E277700ECE91A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FACC8CB6296E277D00ECE91A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		FACC8CB7296E278600ECE91A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
