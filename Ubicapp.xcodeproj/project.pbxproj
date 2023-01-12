@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F56CC60296FA9D800481C38 /* UbicappModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56CC5F296FA9D800481C38 /* UbicappModel.swift */; };
+		3F56CC63296FB0A900481C38 /* UbicappModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F56CC61296FB0A900481C38 /* UbicappModel.xcdatamodeld */; };
 		FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C82296E269300ECE91A /* AppDelegate.swift */; };
 		FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C84296E269300ECE91A /* SceneDelegate.swift */; };
 		FACC8C87296E269300ECE91A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C86296E269300ECE91A /* ViewController.swift */; };
 		FACC8C8A296E269300ECE91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACC8C88296E269300ECE91A /* Main.storyboard */; };
-		FACC8C8D296E269300ECE91A /* Ubicapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C8B296E269300ECE91A /* Ubicapp.xcdatamodeld */; };
 		FACC8C8F296E269600ECE91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACC8C8E296E269600ECE91A /* Assets.xcassets */; };
 		FACC8C92296E269600ECE91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACC8C90296E269600ECE91A /* LaunchScreen.storyboard */; };
 		FACC8C9D296E269600ECE91A /* UbicappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C9C296E269600ECE91A /* UbicappTests.swift */; };
@@ -37,12 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F56CC5F296FA9D800481C38 /* UbicappModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappModel.swift; sourceTree = "<group>"; };
+		3F56CC62296FB0A900481C38 /* UbicappModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UbicappModel.xcdatamodel; sourceTree = "<group>"; };
 		FACC8C7F296E269300ECE91A /* Ubicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ubicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACC8C82296E269300ECE91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACC8C84296E269300ECE91A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FACC8C86296E269300ECE91A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FACC8C89296E269300ECE91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FACC8C8C296E269300ECE91A /* Ubicapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ubicapp.xcdatamodel; sourceTree = "<group>"; };
 		FACC8C8E296E269600ECE91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACC8C91296E269600ECE91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FACC8C93296E269600ECE91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +80,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F56CC5C296FA93F00481C38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3F56CC5D296FA94F00481C38 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3F56CC5E296FA96200481C38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F56CC5F296FA9D800481C38 /* UbicappModel.swift */,
+				3F56CC61296FB0A900481C38 /* UbicappModel.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FACC8C76296E269300ECE91A = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +126,16 @@
 		FACC8C81296E269300ECE91A /* Ubicapp */ = {
 			isa = PBXGroup;
 			children = (
-				FACC8C82296E269300ECE91A /* AppDelegate.swift */,
+				3F56CC5E296FA96200481C38 /* Models */,
+				3F56CC5D296FA94F00481C38 /* ViewModels */,
+				3F56CC5C296FA93F00481C38 /* Views */,
 				FACC8C84296E269300ECE91A /* SceneDelegate.swift */,
+				FACC8C82296E269300ECE91A /* AppDelegate.swift */,
 				FACC8C86296E269300ECE91A /* ViewController.swift */,
 				FACC8C88296E269300ECE91A /* Main.storyboard */,
 				FACC8C8E296E269600ECE91A /* Assets.xcassets */,
 				FACC8C90296E269600ECE91A /* LaunchScreen.storyboard */,
 				FACC8C93296E269600ECE91A /* Info.plist */,
-				FACC8C8B296E269300ECE91A /* Ubicapp.xcdatamodeld */,
 			);
 			path = Ubicapp;
 			sourceTree = "<group>";
@@ -261,9 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACC8C8D296E269300ECE91A /* Ubicapp.xcdatamodeld in Sources */,
 				FACC8C87296E269300ECE91A /* ViewController.swift in Sources */,
+				3F56CC63296FB0A900481C38 /* UbicappModel.xcdatamodeld in Sources */,
 				FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */,
+				3F56CC60296FA9D800481C38 /* UbicappModel.swift in Sources */,
 				FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,13 +630,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FACC8C8B296E269300ECE91A /* Ubicapp.xcdatamodeld */ = {
+		3F56CC61296FB0A900481C38 /* UbicappModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FACC8C8C296E269300ECE91A /* Ubicapp.xcdatamodel */,
+				3F56CC62296FB0A900481C38 /* UbicappModel.xcdatamodel */,
 			);
-			currentVersion = FACC8C8C296E269300ECE91A /* Ubicapp.xcdatamodel */;
-			path = Ubicapp.xcdatamodeld;
+			currentVersion = 3F56CC62296FB0A900481C38 /* UbicappModel.xcdatamodel */;
+			path = UbicappModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
