@@ -18,6 +18,9 @@
 		FACC8C9D296E269600ECE91A /* UbicappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C9C296E269600ECE91A /* UbicappTests.swift */; };
 		FACC8CA7296E269600ECE91A /* UbicappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8CA6296E269600ECE91A /* UbicappUITests.swift */; };
 		FACC8CA9296E269600ECE91A /* UbicappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */; };
+		FADCF7F12970AFAD0042BEF7 /* MapaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADCF7F02970AFAD0042BEF7 /* MapaViewModel.swift */; };
+		FADCF7F62970AFFC0042BEF7 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADCF7F42970AFFC0042BEF7 /* MapaViewController.swift */; };
+		FADCF7F72970AFFC0042BEF7 /* MapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADCF7F52970AFFC0042BEF7 /* MapaViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		FACC8CA2296E269600ECE91A /* UbicappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UbicappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACC8CA6296E269600ECE91A /* UbicappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappUITests.swift; sourceTree = "<group>"; };
 		FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FADCF7F02970AFAD0042BEF7 /* MapaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewModel.swift; sourceTree = "<group>"; };
+		FADCF7F42970AFFC0042BEF7 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		FADCF7F52970AFFC0042BEF7 /* MapaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapaViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,20 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F56CC5C296FA93F00481C38 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		3F56CC5D296FA94F00481C38 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		3F56CC5E296FA96200481C38 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +118,8 @@
 		FACC8C81296E269300ECE91A /* Ubicapp */ = {
 			isa = PBXGroup;
 			children = (
+				FADCF7F22970AFB60042BEF7 /* Map */,
 				3F56CC5E296FA96200481C38 /* Models */,
-				3F56CC5D296FA94F00481C38 /* ViewModels */,
-				3F56CC5C296FA93F00481C38 /* Views */,
 				FACC8C84296E269300ECE91A /* SceneDelegate.swift */,
 				FACC8C82296E269300ECE91A /* AppDelegate.swift */,
 				FACC8C86296E269300ECE91A /* ViewController.swift */,
@@ -155,6 +146,32 @@
 				FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */,
 			);
 			path = UbicappUITests;
+			sourceTree = "<group>";
+		};
+		FADCF7EF2970AE670042BEF7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FADCF7F02970AFAD0042BEF7 /* MapaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FADCF7F22970AFB60042BEF7 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				FADCF7F32970AFCD0042BEF7 /* View */,
+				FADCF7EF2970AE670042BEF7 /* ViewModel */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		FADCF7F32970AFCD0042BEF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FADCF7F42970AFFC0042BEF7 /* MapaViewController.swift */,
+				FADCF7F52970AFFC0042BEF7 /* MapaViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACC8C92296E269600ECE91A /* LaunchScreen.storyboard in Resources */,
+				FADCF7F72970AFFC0042BEF7 /* MapaViewController.xib in Resources */,
 				FACC8C8F296E269600ECE91A /* Assets.xcassets in Resources */,
 				FACC8C8A296E269300ECE91A /* Main.storyboard in Resources */,
 			);
@@ -292,7 +310,9 @@
 				3F56CC63296FB0A900481C38 /* UbicappModel.xcdatamodeld in Sources */,
 				FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */,
 				3F56CC60296FA9D800481C38 /* UbicappModel.swift in Sources */,
+				FADCF7F62970AFFC0042BEF7 /* MapaViewController.swift in Sources */,
 				FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */,
+				FADCF7F12970AFAD0042BEF7 /* MapaViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
