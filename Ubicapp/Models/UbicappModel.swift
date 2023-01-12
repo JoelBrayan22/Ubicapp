@@ -37,8 +37,6 @@ class UbicappModel {
     // MARK: Published (Publicadores de cambios)
     // Publicador de todas las ubicaciones
     @Published var ubicaciones: [UbicacionEntity] = []
-    // Index seleccionado
-    @Published var indexSeleccionado: Int?
     // Ubicacion seleccionada
     @Published var ubicacionSeleccionada: UbicacionEntity?
     
@@ -63,12 +61,11 @@ class UbicappModel {
     }
     
     // Seleccionar una ubicacion
-    func seleccionarUbicacion(index: Int) {
+    func seleccionarUbicacion(id: Int) {
         
-        guard index >= 0 && index < self.ubicaciones.count else { return }
+        guard id >= 0 && id < self.ubicaciones.count else { return }
         
-        self.indexSeleccionado = index
-        self.ubicacionSeleccionada = self.ubicaciones[index]
+        self.ubicacionSeleccionada = self.ubicaciones[id]
         
     }
     
