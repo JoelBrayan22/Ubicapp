@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3F56CC60296FA9D800481C38 /* UbicappModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56CC5F296FA9D800481C38 /* UbicappModel.swift */; };
 		3F56CC63296FB0A900481C38 /* UbicappModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F56CC61296FB0A900481C38 /* UbicappModel.xcdatamodeld */; };
+		FA247E892970B9E9005538DE /* QRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA247E882970B9E9005538DE /* QRViewModel.swift */; };
+		FA247E8B2970BA6D005538DE /* GenerarCodigoQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA247E8A2970BA6D005538DE /* GenerarCodigoQR.swift */; };
+		FA247E8E2970BAD1005538DE /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA247E8C2970BAD1005538DE /* QRViewController.swift */; };
+		FA247E8F2970BAD1005538DE /* QRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA247E8D2970BAD1005538DE /* QRViewController.xib */; };
 		FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C82296E269300ECE91A /* AppDelegate.swift */; };
 		FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C84296E269300ECE91A /* SceneDelegate.swift */; };
 		FACC8C87296E269300ECE91A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C86296E269300ECE91A /* ViewController.swift */; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		3F56CC5F296FA9D800481C38 /* UbicappModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappModel.swift; sourceTree = "<group>"; };
 		3F56CC62296FB0A900481C38 /* UbicappModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UbicappModel.xcdatamodel; sourceTree = "<group>"; };
+		FA247E882970B9E9005538DE /* QRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewModel.swift; sourceTree = "<group>"; };
+		FA247E8A2970BA6D005538DE /* GenerarCodigoQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerarCodigoQR.swift; sourceTree = "<group>"; };
+		FA247E8C2970BAD1005538DE /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		FA247E8D2970BAD1005538DE /* QRViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRViewController.xib; sourceTree = "<group>"; };
 		FACC8C7F296E269300ECE91A /* Ubicapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ubicapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACC8C82296E269300ECE91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACC8C84296E269300ECE91A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +103,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FA247E852970B861005538DE /* DetailsQR */ = {
+			isa = PBXGroup;
+			children = (
+				FA247E872970B98B005538DE /* ViewModel */,
+				FA247E862970B96B005538DE /* view */,
+				FA247E8A2970BA6D005538DE /* GenerarCodigoQR.swift */,
+			);
+			path = DetailsQR;
+			sourceTree = "<group>";
+		};
+		FA247E862970B96B005538DE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FA247E8C2970BAD1005538DE /* QRViewController.swift */,
+				FA247E8D2970BAD1005538DE /* QRViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FA247E872970B98B005538DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA247E882970B9E9005538DE /* QRViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FACC8C76296E269300ECE91A = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +153,7 @@
 		FACC8C81296E269300ECE91A /* Ubicapp */ = {
 			isa = PBXGroup;
 			children = (
+				FA247E852970B861005538DE /* DetailsQR */,
 				FADCF7F22970AFB60042BEF7 /* Map */,
 				3F56CC5E296FA96200481C38 /* Models */,
 				FACC8C84296E269300ECE91A /* SceneDelegate.swift */,
@@ -280,6 +316,7 @@
 			files = (
 				FACC8C92296E269600ECE91A /* LaunchScreen.storyboard in Resources */,
 				FADCF7F72970AFFC0042BEF7 /* MapaViewController.xib in Resources */,
+				FA247E8F2970BAD1005538DE /* QRViewController.xib in Resources */,
 				FACC8C8F296E269600ECE91A /* Assets.xcassets in Resources */,
 				FACC8C8A296E269300ECE91A /* Main.storyboard in Resources */,
 			);
@@ -307,8 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACC8C87296E269300ECE91A /* ViewController.swift in Sources */,
+				FA247E8E2970BAD1005538DE /* QRViewController.swift in Sources */,
 				3F56CC63296FB0A900481C38 /* UbicappModel.xcdatamodeld in Sources */,
 				FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */,
+				FA247E8B2970BA6D005538DE /* GenerarCodigoQR.swift in Sources */,
+				FA247E892970B9E9005538DE /* QRViewModel.swift in Sources */,
 				3F56CC60296FA9D800481C38 /* UbicappModel.swift in Sources */,
 				FADCF7F62970AFFC0042BEF7 /* MapaViewController.swift in Sources */,
 				FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */,
