@@ -22,13 +22,12 @@ let image: Binary Data
 class UbicacionMarcadaModel { 
 /// TODO:
 ///       1.- importacion CoreData, Combine
-///       2.- Creación del singleton para el acceso global
-///       3.- Instanciar a el Contenedor Persistente
-///       4.- Creación de la función para cargar la(s) ubicación(es) marcada(s).
-///       5.- Creación de la función para añadir una nueva marca.
-///       6.- Creación de la función para mandar una ubicación seleccionada.
-///       7.- Creación de la función para actualizar ubicaciòn selecionada
-///       8.- Creaciòn de los publishers a utilizar
+///       2.- Instanciar a el Contenedor Persistente
+///       3.- Creación de la función para cargar la(s) ubicación(es) marcada(s).
+///       4.- Creación de la función para añadir una nueva marca.
+///       5.- Creación de la función para mandar una ubicación seleccionada.
+///       6.- Creación de la función para actualizar ubicaciòn selecionada
+///       7.- Creaciòn de los publishers a utilizar
           
      static let shared UbicacionMarcadaModel ()
      
@@ -49,6 +48,32 @@ class UbicacionMarcadaModel {
       
 }
 ```
+# Ubicapp Views
+
+>Clase MapView
+```swift
+
+protocol MapView: NSObject { 
+
+func ubicacion(añadirUbicacion ubicacion: [LocacionEntity])
+func ubicacion(cargarUbicacionesMarcadas: [locacionEntity])
+
+}
+
+```
+
+>Clase DetallesMarcadorView
+```swift
+
+protocol DetallesMarcadorView: NSObject { 
+
+func ubicacion(ubicacionSeleccionada ubicacion: [LocacionEntity])
+func ubicacion(ubicacionActualizada ubicacion: [LocacionEntity])
+
+}
+
+```
+
 
 # Ubicapp ViewModels
 >Clase MapaViewModel
@@ -87,8 +112,3 @@ deinit() {
 }
 
 ```
-# Ubicapp Views
-
->Clase MapaViewController
-
->Clase DetallesMarcadorViewController
