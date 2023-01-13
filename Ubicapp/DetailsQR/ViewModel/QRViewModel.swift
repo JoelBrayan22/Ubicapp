@@ -35,7 +35,7 @@ class QRViewModel {
     }
     
     func actualizarLaImagenDeLaUbicacionSelecionada(imageData: Data?) {
-        UbicappModel.shared.actualizarUbicacion(nombre: nil, latitud: nil, longitud: nil, image: imageData)
+        UbicappModel.shared.actualizarUbicacion(nombre: nil, latitud: nil, longitud: nil, imagen: imageData)
     }
 
     deinit {
