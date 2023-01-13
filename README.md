@@ -24,9 +24,9 @@ class UbicacionMarcadaModel {
 ///       1.- importacion CoreData, Combine
 ///       2.- Instanciar a el Contenedor Persistente
 ///       3.- Creación de la función para cargar la(s) ubicación(es) marcada(s).
-///       4.- Creación de la función para añadir una nueva marca.
-///       5.- Creación de la función para mandar una ubicación seleccionada.
-///       6.- Creación de la función para actualizar ubicaciòn selecionada
+///       4.- Creación de la función para añadir una nueva marcador.
+///       5.- Creación de la función para mandar un marcador seleccionada.
+///       6.- Creación de la función para actualizar un marcador selecionado
 ///       7.- Creaciòn de los publishers a utilizar
           
      static let shared UbicacionMarcadaModel ()
@@ -42,9 +42,11 @@ class UbicacionMarcadaModel {
       
       func añadirMarcadorUbicacion(latitud: Double, longitud: Double, nombre: String?)
 
-      func ubicacionSeleccionada(id: Int) 
+      func marcadorSeleccionado(id: Int) 
       
-      func actualizarUbicacionMarcada(nombre: String?)
+      func actualizarUbicacionMarcada(nombre: String?, latitud: Double?, longitud: Double?, imagen: Data?)
+      
+      func eliminarMarcador()
       
 }
 ```
@@ -68,7 +70,7 @@ func ubicacion(cargarUbicacionesMarcadas: [locacionEntity])
 protocol DetallesMarcadorView: NSObject { 
 
 func ubicacion(ubicacionSeleccionada ubicacion: [LocacionEntity])
-func ubicacion(ubicacionActualizada ubicacion: [LocacionEntity])
+func ubicacion(ubicacionActualizada ubicacion: LocacionEntity?)
 
 }
 
@@ -99,8 +101,9 @@ deinit() {
 >Clase DetallesUbicacionMarcadaViewModel
 ```swift
 class UbicacionMarcadaViewModel { 
+
 weak var model: UbicacionesModel?
-weak var view: DetallesUbicacionViewMode?
+weak var view: DetallesUbicacionViewModel?
 
 var ubicacionesSubscriber: AnyCancelable?
 
