@@ -71,7 +71,7 @@ class UbicappModel {
     }
     
     // Agregar una ubicacion
-    func agregarUbicacion(nombre: String, latitud: Double, longitud: Double) {
+    func agregarUbicacion(latitud: Double, longitud: Double) {
         
         let context = self.container.viewContext
         
@@ -80,17 +80,15 @@ class UbicappModel {
         
         if let ubicacionIdMaxima = self.ubicaciones.max(by: {
             ubicaion1, ubicacion2 in
-            return ubicaion1.id >= ubicacion2.id
+            return ubicaion1.id < ubicacion2.id
         }) {
             ubicacion.id = ubicacionIdMaxima.id + 1
         } else {
             ubicacion.id = 1
         }
         
-        ubicacion.nombre = nombre
         ubicacion.latitud = latitud
         ubicacion.longitud = longitud
-        //ubicacion.imagen = imagen
         
         do {
             try context.save()
