@@ -34,6 +34,9 @@
                             <rect key="frame" x="87.666666666666657" y="111" width="114" height="35"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Ver detalles"/>
+                            <connections>
+                                <action selector="verDetallesUbicacion:" destination="-1" eventType="touchUpInside" id="zh6-fU-c7H"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdz-E2-yam">
                             <rect key="frame" x="15" y="21" width="53" height="21"/>
