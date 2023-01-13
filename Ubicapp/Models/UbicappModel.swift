@@ -76,6 +76,16 @@ class UbicappModel {
         
         let ubicacion = UbicacionEntity(context: context)
         
+        
+        if let ubicacionIdMaxima = self.ubicaciones.max(by: {
+            ubicaion1, ubicacion2 in
+            return ubicaion1.id >= ubicacion2.id
+        }) {
+            ubicacion.id = ubicacionIdMaxima.id + 1
+        } else {
+            ubicacion.id = 1
+        }
+        
         ubicacion.nombre = nombre
         ubicacion.latitud = latitud
         ubicacion.longitud = longitud
@@ -90,7 +100,7 @@ class UbicappModel {
     }
     
     // Actualizar una ubicacion.
-    func actualizarUbicacion(nombre: String?, latitud: Double?, longitud: Double?) {
+    func actualizarUbicacion(nombre: String?, latitud: Double?, longitud: Double?, imagen: Data?) {
         
         if let ubicacionSeleccionada = self.ubicacionSeleccionada {
             
@@ -105,12 +115,16 @@ class UbicappModel {
             if let longitud = longitud {
                 ubicacionSeleccionada.longitud = longitud
             }
+            if let image = imagen{
+                ubicacionSeleccionada.imagen = image
+            }
             
             let context = container.viewContext
             
             do {
                 try context.save()
                 self.loadUbicaciones()
+                self.ubicacionSeleccionada = ubicacionSeleccionada
             } catch {
                 context.rollback()
             }
