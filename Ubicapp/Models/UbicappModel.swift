@@ -80,7 +80,7 @@ class UbicappModel {
         
         if let ubicacionIdMaxima = self.ubicaciones.max(by: {
             ubicaion1, ubicacion2 in
-            return ubicaion1.id < ubicacion2.id
+            return ubicaion1.id >= ubicacion2.id
         }) {
             ubicacion.id = ubicacionIdMaxima.id + 1
         } else {
@@ -89,6 +89,8 @@ class UbicappModel {
         
         ubicacion.latitud = latitud
         ubicacion.longitud = longitud
+        ubicacion.nombre = "Anonimo"
+        ubicacion.id = Int32.random(in: 1...100)
         
         do {
             try context.save()
