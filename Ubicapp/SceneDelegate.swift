@@ -52,6 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UINavigationControllerD
         if let viewController = viewController as? MapaViewController {
     
             // Conexion de modelo con vista-modelo
+            self.mapaViewModel.view = viewController
             viewController.mapaViewModel = self.mapaViewModel
             
         }
