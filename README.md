@@ -99,6 +99,11 @@ deinit() {
 >Clase DetallesUbicacionMarcadaViewModel
 ```swift
 class UbicacionMarcadaViewModel { 
+weak var model: UbicacionesModel?
+weak var view: DetallesUbicacionViewMode?
+
+var ubicacionesSubscriber: AnyCancelable?
+
 // TODO: cargar todas las ubicaciones
 // Publicadores
 // Suscriptores
