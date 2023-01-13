@@ -14,31 +14,55 @@ import Combine
 
 class MapaViewModel {
     
+    // Modelo
     weak var model: UbicappModel?
+    // Protocolo para notificarle a la vista de algun evento
     weak var view: MapaView?
+    // Escucha alguna actualizacion de las ubicaciones desde el modelo
     var ubicacionesSubscriber: AnyCancellable?
     
+    // Subscripciones a los cambios que ocupamos
     init(model: UbicappModel) {
         
         self.model = model
         
-        self.ubicacionesSubscriber = model.$ubicaciones.sink {
-            [weak self] ubicaciones in
-            
-            self?.view?.ubicaciones(ubicaciones: ubicaciones)
-        }
+        // MARK: Funciones para escuchar actualizaciones desde el modelo
         
-        self.ubicacionesSubscriber = model.$ubicacionSeleccionada.sink {
+        // Escucha cuando todo el arreglo de ubicaciones
+        self.ubicacionesSubscriber = model.$ubicaciones.sink(receiveValue: { [weak self] ubicaciones in
+            
+            self?.view?.ubicacion(ubicaciones: ubicaciones)
+        })
+        
+        // Escucha cual es la ubicacion seleccionada
+        self.ubicacionesSubscriber = model.$ubicacionSeleccionada.sink(receiveValue: {
             [weak self] ubicacion in
             
-            self?.view?.ubicaciones(UbicacionSeleccionada: ubicacion!)
-        }
+            // Desempaquetamos ubicacion seleccionada (ubicacion)
+            if let ubicacion = ubicacion {
+                self?.view?.ubicacion(ubicacionSeleccionada: ubicacion)
+                
+            }
+        })
     }
+    
+    // MARK: Funcion que consume la vista.
     
     func seleccionarUbicacion(id: Int) {
         self.model?.seleccionarUbicacion(id: id)
     }
     
+    func agregarUbicacion(latitud: Double, longitud: Double) {
+        self.model?.agregarUbicacion(latitud: latitud, longitud: longitud)
+    }
+    
+    func refreshUbicaciones() {
+        guard let model = self.model else { return }
+        
+        self.view?.ubicacion(ubicaciones: model.ubicaciones)
+    }
+    
 }
+
 
 

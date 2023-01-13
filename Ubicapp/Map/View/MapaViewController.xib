@@ -11,7 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapaViewController" customModule="Ubicapp" customModuleProvider="target">
             <connections>
-                <outlet property="myMapKit" destination="0IS-M1-OZW" id="keP-9U-ebB"/>
+                <outlet property="detallesUbicacionView" destination="xRh-UE-hxg" id="n3F-nM-hMj"/>
+                <outlet property="latitudLabel" destination="Tdz-E2-yam" id="Pyn-sK-b5y"/>
+                <outlet property="longitudLabel" destination="SF3-Yf-YNM" id="VLe-mc-yhT"/>
+                <outlet property="myMapKit" destination="0IS-M1-OZW" id="r1A-EJ-hlJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,11 +24,54 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IS-M1-OZW">
-                    <rect key="frame" x="15" y="95" width="363" height="708"/>
+                    <rect key="frame" x="15" y="107" width="363" height="701"/>
                     <standardMapConfiguration key="preferredConfiguration"/>
                 </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRh-UE-hxg">
+                    <rect key="frame" x="52" y="635" width="289" height="154"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO8-Hn-Iu4">
+                            <rect key="frame" x="87.666666666666657" y="111" width="114" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Ver detalles"/>
+                            <connections>
+                                <action selector="verDetallesUbicacion:" destination="-1" eventType="touchUpInside" id="zh6-fU-c7H"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdz-E2-yam">
+                            <rect key="frame" x="15" y="21" width="53" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SF3-Yf-YNM">
+                            <rect key="frame" x="207" y="21" width="67" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="gO8-Hn-Iu4" secondAttribute="bottom" constant="8" id="4Hs-w5-3SF"/>
+                        <constraint firstItem="Tdz-E2-yam" firstAttribute="leading" secondItem="xRh-UE-hxg" secondAttribute="leading" constant="15" id="GQT-9t-TAI"/>
+                        <constraint firstItem="Tdz-E2-yam" firstAttribute="top" secondItem="xRh-UE-hxg" secondAttribute="top" constant="21" id="IW2-ak-Wah"/>
+                        <constraint firstItem="gO8-Hn-Iu4" firstAttribute="top" secondItem="xRh-UE-hxg" secondAttribute="top" constant="111" id="UBj-DT-ZPR"/>
+                        <constraint firstItem="gO8-Hn-Iu4" firstAttribute="centerX" secondItem="xRh-UE-hxg" secondAttribute="centerX" id="bbx-Lq-iFl"/>
+                        <constraint firstAttribute="trailing" secondItem="SF3-Yf-YNM" secondAttribute="trailing" constant="15" id="isV-1e-hpD"/>
+                        <constraint firstItem="SF3-Yf-YNM" firstAttribute="top" secondItem="xRh-UE-hxg" secondAttribute="top" constant="21" id="jXg-l2-Reb"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCO-4H-F0b">
+                    <rect key="frame" x="302" y="52" width="75" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="agregarButton:" destination="-1" eventType="touchUpInside" id="kvw-wb-p6b"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ubicapp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvB-gQ-RHq">
-                    <rect key="frame" x="164.66666666666666" y="59" width="64" height="21"/>
+                    <rect key="frame" x="164.66666666666666" y="49" width="64" height="38"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -34,14 +80,21 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0IS-M1-OZW" secondAttribute="bottom" constant="15" id="1Do-Xi-owt"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0IS-M1-OZW" secondAttribute="trailing" constant="15" id="9Sc-wJ-XBj"/>
-                <constraint firstItem="jvB-gQ-RHq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YVH-5B-LLY"/>
-                <constraint firstItem="0IS-M1-OZW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="hWS-xs-qfH"/>
-                <constraint firstItem="jvB-gQ-RHq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="inW-wA-AhF"/>
-                <constraint firstItem="0IS-M1-OZW" firstAttribute="top" secondItem="jvB-gQ-RHq" secondAttribute="bottom" constant="15" id="ipG-eG-tf6"/>
+                <constraint firstItem="iCO-4H-F0b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="37q-jK-Lmi"/>
+                <constraint firstItem="0IS-M1-OZW" firstAttribute="top" secondItem="iCO-4H-F0b" secondAttribute="bottom" constant="20" id="5m9-Xj-STN"/>
+                <constraint firstItem="xRh-UE-hxg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="52" id="82j-yB-Fnt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0IS-M1-OZW" secondAttribute="bottom" constant="10" id="9tW-M5-2K0"/>
+                <constraint firstItem="jvB-gQ-RHq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="49" id="HFu-i4-WjM"/>
+                <constraint firstItem="0IS-M1-OZW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="K9j-uJ-OOD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xRh-UE-hxg" secondAttribute="bottom" constant="29" id="Nbh-om-aQv"/>
+                <constraint firstItem="jvB-gQ-RHq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qxy-EV-Z6C"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iCO-4H-F0b" secondAttribute="trailing" constant="16" id="RLD-Ip-gc9"/>
+                <constraint firstItem="xRh-UE-hxg" firstAttribute="top" secondItem="iCO-4H-F0b" secondAttribute="bottom" constant="548" id="VhH-kD-IBH"/>
+                <constraint firstItem="0IS-M1-OZW" firstAttribute="top" secondItem="jvB-gQ-RHq" secondAttribute="bottom" constant="20" id="Xhd-qR-nyc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xRh-UE-hxg" secondAttribute="trailing" constant="52" id="bXw-er-ZaL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0IS-M1-OZW" secondAttribute="trailing" constant="15" id="ccX-BX-K2x"/>
             </constraints>
-            <point key="canvasLocation" x="140" y="20"/>
+            <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
