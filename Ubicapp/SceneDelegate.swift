@@ -7,16 +7,74 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+//   Proyecto: Ubicapp
+//
+// Autores:
+// Joel Brayan Navor Jimenez
+// Jonathan
+// Heber Eduardo Jimenez Rodriguez
+//
+// Creado el 12 de enero del 2023 por jonothan Amador
+// Modificaciones:
+// Modificado por: Jonathan Amador el 13/01/2023
+//
+
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, UINavigationControllerDelegate {
 
     var window: UIWindow?
 
+    lazy var ubicappModel: UbicappModel = {
+        let modelo = UbicappModel()
+        return modelo
+    }()
+    
+    lazy var qrViewModel: QRViewModel = {
+        let qrViewModel  = QRViewModel()
+        return qrViewModel
+    }()
 
+    lazy var mapaViewModel: MapaViewModel = {
+        let mapaViewModel = MapaViewModel(model: self.ubicappModel)
+        return mapaViewModel
+    }()
+    
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        
+        if let viewController = viewController as? QRViewController {
+            
+            viewController.qrViewModel = self.qrViewModel
+            
+        }
+        
+        if let viewController = viewController as? MapaViewController {
+    
+            //TODO: Conectar MapaViewModel a MapaViewController
+           // viewController.
+            
+        }
+        
+    }
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        
+        let navigationController = UINavigationController()
+        
+        navigationController.pushViewController(MapaViewController(), animated: false)
+        
+        
+        //
+        window?.rootViewController = navigationController
+        
+        
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
