@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UINavigationControllerD
     }()
     
     lazy var qrViewModel: QRViewModel = {
-        let qrViewModel  = QRViewModel()
+        let qrViewModel  = QRViewModel(model: self.ubicappModel)
         return qrViewModel
     }()
 
@@ -44,6 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UINavigationControllerD
         
         if let viewController = viewController as? QRViewController {
             
+            self.qrViewModel.view = viewController
             viewController.qrViewModel = self.qrViewModel
             
         }

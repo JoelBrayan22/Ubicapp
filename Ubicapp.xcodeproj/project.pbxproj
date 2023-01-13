@@ -23,6 +23,7 @@
 		FACC8C9D296E269600ECE91A /* UbicappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8C9C296E269600ECE91A /* UbicappTests.swift */; };
 		FACC8CA7296E269600ECE91A /* UbicappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8CA6296E269600ECE91A /* UbicappUITests.swift */; };
 		FACC8CA9296E269600ECE91A /* UbicappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */; };
+		FADB1C68297211730007EE34 /* Protocolos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADB1C67297211730007EE34 /* Protocolos.swift */; };
 		FADCF7F12970AFAD0042BEF7 /* MapaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADCF7F02970AFAD0042BEF7 /* MapaViewModel.swift */; };
 		FADCF7F62970AFFC0042BEF7 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADCF7F42970AFFC0042BEF7 /* MapaViewController.swift */; };
 		FADCF7F72970AFFC0042BEF7 /* MapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADCF7F52970AFFC0042BEF7 /* MapaViewController.xib */; };
@@ -66,6 +67,7 @@
 		FACC8CA2296E269600ECE91A /* UbicappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UbicappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACC8CA6296E269600ECE91A /* UbicappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappUITests.swift; sourceTree = "<group>"; };
 		FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FADB1C67297211730007EE34 /* Protocolos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocolos.swift; sourceTree = "<group>"; };
 		FADCF7F02970AFAD0042BEF7 /* MapaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewModel.swift; sourceTree = "<group>"; };
 		FADCF7F42970AFFC0042BEF7 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		FADCF7F52970AFFC0042BEF7 /* MapaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapaViewController.xib; sourceTree = "<group>"; };
@@ -108,8 +110,9 @@
 		FA247E852970B861005538DE /* DetailsQR */ = {
 			isa = PBXGroup;
 			children = (
-				FA247E872970B98B005538DE /* ViewModel */,
+				FADB1C66297211380007EE34 /* Protocolo */,
 				FA247E862970B96B005538DE /* view */,
+				FA247E872970B98B005538DE /* ViewModel */,
 				FA247E8A2970BA6D005538DE /* GenerarCodigoQR.swift */,
 			);
 			path = DetailsQR;
@@ -184,6 +187,14 @@
 				FACC8CA8296E269600ECE91A /* UbicappUITestsLaunchTests.swift */,
 			);
 			path = UbicappUITests;
+			sourceTree = "<group>";
+		};
+		FADB1C66297211380007EE34 /* Protocolo */ = {
+			isa = PBXGroup;
+			children = (
+				FADB1C67297211730007EE34 /* Protocolos.swift */,
+			);
+			path = Protocolo;
 			sourceTree = "<group>";
 		};
 		FADCF7EF2970AE670042BEF7 /* ViewModel */ = {
@@ -353,6 +364,7 @@
 				FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */,
 				FA247E8B2970BA6D005538DE /* GenerarCodigoQR.swift in Sources */,
 				FA247E892970B9E9005538DE /* QRViewModel.swift in Sources */,
+				FADB1C68297211730007EE34 /* Protocolos.swift in Sources */,
 				3F56CC60296FA9D800481C38 /* UbicappModel.swift in Sources */,
 				FADCF7F62970AFFC0042BEF7 /* MapaViewController.swift in Sources */,
 				FACC8C85296E269300ECE91A /* SceneDelegate.swift in Sources */,
