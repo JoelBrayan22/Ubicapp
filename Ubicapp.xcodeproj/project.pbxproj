@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F56CC60296FA9D800481C38 /* UbicappModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56CC5F296FA9D800481C38 /* UbicappModel.swift */; };
 		3F56CC63296FB0A900481C38 /* UbicappModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F56CC61296FB0A900481C38 /* UbicappModel.xcdatamodeld */; };
+		3FDDE01C297108AB00F9FB8C /* MapaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDE01B297108AB00F9FB8C /* MapaView.swift */; };
 		FA247E892970B9E9005538DE /* QRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA247E882970B9E9005538DE /* QRViewModel.swift */; };
 		FA247E8B2970BA6D005538DE /* GenerarCodigoQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA247E8A2970BA6D005538DE /* GenerarCodigoQR.swift */; };
 		FA247E8E2970BAD1005538DE /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA247E8C2970BAD1005538DE /* QRViewController.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		3F56CC5F296FA9D800481C38 /* UbicappModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbicappModel.swift; sourceTree = "<group>"; };
 		3F56CC62296FB0A900481C38 /* UbicappModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UbicappModel.xcdatamodel; sourceTree = "<group>"; };
+		3FDDE01B297108AB00F9FB8C /* MapaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaView.swift; sourceTree = "<group>"; };
 		FA247E882970B9E9005538DE /* QRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewModel.swift; sourceTree = "<group>"; };
 		FA247E8A2970BA6D005538DE /* GenerarCodigoQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerarCodigoQR.swift; sourceTree = "<group>"; };
 		FA247E8C2970BAD1005538DE /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				FADCF7F02970AFAD0042BEF7 /* MapaViewModel.swift */,
+				3FDDE01B297108AB00F9FB8C /* MapaView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				FACC8C87296E269300ECE91A /* ViewController.swift in Sources */,
 				FA247E8E2970BAD1005538DE /* QRViewController.swift in Sources */,
 				3F56CC63296FB0A900481C38 /* UbicappModel.xcdatamodeld in Sources */,
+				3FDDE01C297108AB00F9FB8C /* MapaView.swift in Sources */,
 				FACC8C83296E269300ECE91A /* AppDelegate.swift in Sources */,
 				FA247E8B2970BA6D005538DE /* GenerarCodigoQR.swift in Sources */,
 				FA247E892970B9E9005538DE /* QRViewModel.swift in Sources */,
