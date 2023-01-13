@@ -1,8 +1,15 @@
 //
-//  QRViewController.swift
-//  Ubicapp
+//   Proyecto: Ubicapp
 //
-//  Created by MacBook  on 12/01/23.
+// Autores:
+// Joel Brayan Navor Jimenez
+// Jonathan
+// Heber Eduardo Jimenez Rodriguez
+//
+// Creado el 12 de enero del 2023 por jonothan Amador
+// Modificaciones:
+// Modificado por: Jonathan Amador el 13/01/2023
+//
 //
 
 import UIKit
@@ -15,7 +22,9 @@ class QRViewController: UIViewController {
     @IBOutlet weak var longitudLabel: UILabel!
     @IBOutlet weak var qrImageView: UIImageView!
     
+    // generamos una variable de tipo Protocolo obpcional
     var ubicacionSelecionada: UbicacionEntity?
+    // generamos un objeto del
     var qrViewModel: QRViewModel = QRViewModel()
 
     override func viewDidLoad() {
@@ -35,6 +44,7 @@ class QRViewController: UIViewController {
             if let imagenData = ubicacionSelecionada.imagen {
                 let ubicacionImagen = UIImage(data: imagenData)
                 ubicacionImageView.image = ubicacionImagen
+                
             }
             // set el nombre la ubicacion
             nombreTextField.text = ubicacionSelecionada.nombre
