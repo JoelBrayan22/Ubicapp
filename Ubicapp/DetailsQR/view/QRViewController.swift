@@ -25,17 +25,17 @@ class QRViewController: UIViewController {
     // generamos una variable de tipo Protocolo obpcional
     var ubicacionSelecionada: UbicacionEntity?
     // generamos un objeto del
-    var qrViewModel: QRViewModel = QRViewModel()
+    var qrViewModel: QRViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Vamos a configurar que nosotros vamos a implementar las funciones que faltan en QRViewModel
-        qrViewModel.view = self
+        qrViewModel?.view = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        qrViewModel.recargarProductoSelecionado()
+        qrViewModel?.recargarProductoSelecionado()
     }
     
     func recargarDatos() {
@@ -124,7 +124,7 @@ extension QRViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image =  info[.originalImage] as? UIImage {
 //            ubicacionImageView.image = image
-            qrViewModel.actualizarLaImagenDeLaUbicacionSelecionada(imageData: image.pngData())
+            qrViewModel?.actualizarLaImagenDeLaUbicacionSelecionada(imageData: image.pngData())
         } else {
             print("Imagen no encontrada")
         }

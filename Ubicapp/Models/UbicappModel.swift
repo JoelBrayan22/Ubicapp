@@ -17,7 +17,7 @@ import Combine
 class UbicappModel {
     
     // Singleton
-    static let shared = UbicappModel()
+    
     
     // Creamos el contenedor
     var container: NSPersistentContainer = {
@@ -136,12 +136,12 @@ class UbicappModel {
     // Elimina una ubicacion seleccionada.
     func eliminarUbicacion() {
         
-        if let indexSeleccionado = indexSeleccionado {
+     /*   if let indexSeleccionado = indexSeleccionado {
             
             self.ubicaciones.remove(at: indexSeleccionado)
             self.indexSeleccionado = nil
             self.ubicacionSeleccionada = nil
             self.loadUbicaciones()
-        }
+        }*/
     }
 }
