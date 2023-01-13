@@ -32,11 +32,11 @@ class UbicacionMarcadaModel {
      static let shared UbicacionMarcadaModel ()
      
      var container: NSPersistentContainer = {
-     ///
+     
      }
      
-      @Published var ubicacionesmarcadas: [LocacionEntity] = []
-      @Published var ubicacionmarcadaseleccionada: LocacionEntity?
+      @Published var ubicacionesMarcadas: [LocacionEntity] = []
+      @Published var ubicacionMarcadaSeleccionada: LocacionEntity?
       
       func cargarUbicacionesMarcadas() 
       
@@ -79,11 +79,13 @@ func ubicacion(ubicacionActualizada ubicacion: [LocacionEntity])
 >Clase MapaViewModel
 ```swift
 class MapaViewModel { 
-// TODO: cargar la ubicación de la persona 
-// Publicadores
-// Suscriptores
 
-init() {  
+weak var model: UbicacionesModel?
+weak var view:: MapaViewModel?
+
+var ubicacionesSubscriber: AnyCancellable?
+
+init(model: UbicacionesModel) {  
 //TODO: Subscribirse 
 }
 
