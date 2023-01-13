@@ -10,51 +10,35 @@
 //
 
 import UIKit
-import MapKit
+import Combine
 
-class MapaViewController: UIViewController, CLLocationManagerDelegate {
-
-    let manager = CLLocationManager()
-    @IBOutlet weak var myMapKit: MKMapView!
+class MapaViewModel {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    weak var model: UbicappModel?
+    weak var view: MapaView?
+    var ubicacionesSubscriber: AnyCancellable?
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    init(model: UbicappModel) {
         
-        // Seleccionar la presisicion con la que devuelva las coordenadas
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.delegate = self
-        // Solicitar autorizacion
-        manager.requestWhenInUseAuthorization()
-        // Actualizacion de las coordenadas, cada que se mueva de ubicacion
-        manager.startUpdatingLocation()
+        self.model = model
         
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            manager.stopUpdatingLocation()
-            renderMap(location: location)
+        self.ubicacionesSubscriber = model.$ubicaciones.sink {
+            [weak self] ubicaciones in
+            
+            self?.view?.ubicaciones(ubicaciones: ubicaciones)
+        }
+        
+        self.ubicacionesSubscriber = model.$ubicacionSeleccionada.sink {
+            [weak self] ubicacion in
+            
+            self?.view?.ubicaciones(UbicacionSeleccionada: ubicacion!)
         }
     }
     
-    func renderMap(location: CLLocation) {
-        let cordenates = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        
-        let region = MKCoordinateRegion(center: cordenates, latitudinalMeters: 2000, longitudinalMeters: 2000)
-        
-        myMapKit.setRegion(region, animated: true)
-        
-        let pin = MKPointAnnotation()
-        pin.coordinate = cordenates
-        pin.title = "Aqui estoy"
-        pin.subtitle = "Lat: \(location.coordinate.latitude) Long: \(location.coordinate.longitude)"
-        myMapKit.addAnnotation(pin)
+    func seleccionarUbicacion(id: Int) {
+        self.model?.seleccionarUbicacion(id: id)
     }
-
+    
 }
 
 

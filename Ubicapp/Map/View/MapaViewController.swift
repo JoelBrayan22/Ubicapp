@@ -19,8 +19,13 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
     }
     
+    
+    
+    /*
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -53,6 +58,6 @@ class MapaViewController: UIViewController, CLLocationManagerDelegate {
         pin.title = "Aqui estoy"
         pin.subtitle = "Lat: \(location.coordinate.latitude) Long: \(location.coordinate.longitude)"
         myMapKit.addAnnotation(pin)
-    }
+    }*/
 
 }
