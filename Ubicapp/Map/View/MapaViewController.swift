@@ -81,8 +81,8 @@ class MapaViewController: UIViewController {
     
     @IBAction func verDetallesUbicacion(_ sender: Any) {
         
+        // Pasar a vista de detalles
         self.navigationController?.pushViewController(QRViewController(), animated: false)
-        
     }
     
     /*
