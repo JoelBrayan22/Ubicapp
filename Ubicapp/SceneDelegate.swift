@@ -26,6 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UINavigationControllerD
 
     lazy var ubicappModel: UbicappModel = {
         let modelo = UbicappModel()
+        modelo.loadUbicaciones()
         return modelo
     }()
     
@@ -70,6 +71,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UINavigationControllerD
         
         navigationController.pushViewController(MapaViewController(), animated: false)
         
+        navigationController.delegate = self
         
         //
         window?.rootViewController = navigationController

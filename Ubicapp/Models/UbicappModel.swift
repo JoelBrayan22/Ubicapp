@@ -41,6 +41,7 @@ class UbicappModel {
     // Ubicacion seleccionada
     @Published var ubicacionSeleccionada: UbicacionEntity?
     
+    /*
     init() {
         self.loadUbicaciones()
     }
@@ -48,7 +49,7 @@ class UbicappModel {
     deinit {
         self.ubicaciones.removeAll()
     }
-    
+    */
     // MARK: Funciones que podemos aplicar a nuestro modelo
     // Cargar las ubicaciones desde nuestro contenedor
     func loadUbicaciones() {
@@ -57,16 +58,22 @@ class UbicappModel {
         let request = UbicacionEntity.fetchRequest()
         
         if let ubicaciones = try? context.fetch(request) {
-            self.ubicaciones = ubicaciones.reversed()
+            self.ubicaciones = ubicaciones
         }
     }
     
     // Seleccionar una ubicacion
     func seleccionarUbicacion(id: Int) {
         
-        guard id >= 0 && id < self.ubicaciones.count else { return }
+        //guard id >= 0 && id < self.ubicaciones.count else { return }
         
-        self.ubicacionSeleccionada = self.ubicaciones[id]
+        if let ubicacionSeleccionada = self.ubicaciones.filter({ ubicacion in
+            ubicacion.id == Int32(id)
+        }).first {
+            
+            self.ubicacionSeleccionada = ubicacionSeleccionada
+            
+        }
         
     }
     
@@ -80,7 +87,7 @@ class UbicappModel {
         
         if let ubicacionIdMaxima = self.ubicaciones.max(by: {
             ubicaion1, ubicacion2 in
-            return ubicaion1.id >= ubicacion2.id
+            return ubicaion1.id < ubicacion2.id
         }) {
             ubicacion.id = ubicacionIdMaxima.id + 1
         } else {
@@ -95,6 +102,7 @@ class UbicappModel {
         do {
             try context.save()
             self.loadUbicaciones()
+            self.seleccionarUbicacion(id: Int(ubicacion.id))
         } catch {
             context.rollback()
         }
