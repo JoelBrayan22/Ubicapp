@@ -84,15 +84,7 @@ class MapaViewController: UIViewController {
         // Pasar a vista de detalles
         self.navigationController?.pushViewController(QRViewController(), animated: false)
     }
-    
-    /*
-    func setupView() {
-        self.detallesUbicacionView.layer.cornerRadius = detallesUbicacionView.bounds.size.width / 30
-    }
-     */
-    /*
-    @IBAction func agregarButton(_ sender: Any) {
-    }*/
+
 }
 
 extension MapaViewController: UIGestureRecognizerDelegate {
@@ -126,7 +118,7 @@ extension MapaViewController: MapaView {
             let latitud = ubicacion.latitud
             let longitud = ubicacion.longitud
             
-            print("Ubicacion: (\(latitud), \(longitud))")
+            print("Ubicacion: (\(Double(Int(latitud * 1000)) / 1000), \(Double(Int(longitud * 1000)) / 1000 ))")
             
             mark.coordinate = CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
  
@@ -138,8 +130,8 @@ extension MapaViewController: MapaView {
     
     func ubicacion(ubicacionSeleccionada ubicacion: UbicacionEntity) {
         
-        self.latitudLabel.text = "\(ubicacion.latitud)"
-        self.longitudLabel.text = "\(ubicacion.longitud)"
+        self.latitudLabel.text = "\(Double(Int(ubicacion.latitud * 10_000)) / 10_000)"
+        self.longitudLabel.text = "\(Double(Int(ubicacion.longitud * 10_000)) / 10_000)"
     }
 }
 

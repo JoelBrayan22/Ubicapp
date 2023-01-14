@@ -86,6 +86,7 @@ weak var model: UbicacionesModel?
 weak var view:: MapaViewModel?
 
 var ubicacionesSubscriber: AnyCancellable?
+var ubicacionesSeleccionadas: AnyCancellable?
 
 init(model: UbicacionesModel) {  
 //TODO: Subscribirse 

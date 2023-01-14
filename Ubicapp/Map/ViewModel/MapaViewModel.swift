@@ -20,6 +20,7 @@ class MapaViewModel {
     weak var view: MapaView?
     // Escucha alguna actualizacion de las ubicaciones desde el modelo
     var ubicacionesSubscriber: AnyCancellable?
+    var ubicacionSeleccionadaSubscriber: AnyCancellable?
     
     // Subscripciones a los cambios que ocupamos
     init(model: UbicappModel) {
@@ -29,13 +30,15 @@ class MapaViewModel {
         // MARK: Funciones para escuchar actualizaciones desde el modelo
         
         // Escucha cuando todo el arreglo de ubicaciones
-        self.ubicacionesSubscriber = model.$ubicaciones.sink(receiveValue: { [weak self] ubicaciones in
+        self.ubicacionesSubscriber = model.$ubicaciones.sink(receiveValue: {
+            [weak self] ubicaciones in
             
+            print("Actualizando ubicaciones")
             self?.view?.ubicacion(ubicaciones: ubicaciones)
         })
         
         // Escucha cual es la ubicacion seleccionada
-        self.ubicacionesSubscriber = model.$ubicacionSeleccionada.sink(receiveValue: {
+        self.ubicacionSeleccionadaSubscriber = model.$ubicacionSeleccionada.sink(receiveValue: {
             [weak self] ubicacion in
             
             // Desempaquetamos ubicacion seleccionada (ubicacion)
@@ -48,12 +51,12 @@ class MapaViewModel {
     
     // MARK: Funcion que consume la vista.
     
-    func seleccionarUbicacion(id: Int) {
-        self.model?.seleccionarUbicacion(id: id)
-    }
-    
     func agregarUbicacion(latitud: Double, longitud: Double) {
         self.model?.agregarUbicacion(latitud: latitud, longitud: longitud)
+    }
+    
+    func seleccionarUbicacion(id: Int) {
+        self.model?.seleccionarUbicacion(id: id)
     }
     
     func refreshUbicaciones() {
@@ -63,6 +66,4 @@ class MapaViewModel {
     }
     
 }
-
-
 
