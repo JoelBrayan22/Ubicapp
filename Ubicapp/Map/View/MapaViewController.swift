@@ -28,11 +28,23 @@ class MapaViewController: UIViewController {
     
     @IBOutlet weak var longitudLabel: UILabel!
     
+    @IBOutlet weak var nombreUbicacionLabel: UILabel!
+    
+    @IBOutlet weak var centerPupUpConstrain: NSLayoutConstraint!
+    
+    var pantallaPupOp: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.detallesUbicacionView.alpha = 0.7
+        view.backgroundColor = .link
+        
+        detallesUbicacionView.backgroundColor = .opaqueSeparator
+        
+        detallesUbicacionView.layer.cornerRadius = 20
+        detallesUbicacionView.layer.masksToBounds = true
+        
+        centerPupUpConstrain.constant = -700
         
         mapaViewModel?.view = self
         // Ubicacion por defecto
@@ -83,12 +95,19 @@ class MapaViewController: UIViewController {
         }
     }
     
-    @IBAction func verDetallesUbicacion(_ sender: Any) {
+    @IBAction func detallesUbicacionButton(_ sender: Any) {
         
         // Pasar a vista de detalles
         self.navigationController?.pushViewController(QRViewController(), animated: false)
     }
-
+    
+    
+    @IBAction func aceptarButton(_ sender: Any) {
+        
+        centerPupUpConstrain.constant = -700
+        self.myMapKit.alpha = 1
+    }
+    
 }
 
 extension MapaViewController: UIGestureRecognizerDelegate {
@@ -134,8 +153,23 @@ extension MapaViewController: MapaView {
     
     func ubicacion(ubicacionSeleccionada ubicacion: UbicacionEntity) {
         
-        self.latitudLabel.text = "\(Double(Int(ubicacion.latitud * 10_000)) / 10_000)"
-        self.longitudLabel.text = "\(Double(Int(ubicacion.longitud * 10_000)) / 10_000)"
+        self.latitudLabel.text = "Lat: \(Double(Int(ubicacion.latitud * 10_000)) / 10_000)"
+        self.longitudLabel.text = "Long: \(Double(Int(ubicacion.longitud * 10_000)) / 10_000)"
+        self.nombreUbicacionLabel.text = ubicacion.nombre
+        
+        pantallaPupOp = !pantallaPupOp
+        
+        if pantallaPupOp {
+            
+            centerPupUpConstrain.constant = 0
+            
+            UIView.animate(withDuration: 0.9, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseOut) {
+                self.detallesUbicacionView.layoutIfNeeded()
+                self.myMapKit.alpha = 0.5
+            }
+        } else {
+            centerPupUpConstrain.constant = -700
+        }
     }
 }
 
