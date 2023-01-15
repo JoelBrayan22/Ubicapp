@@ -14,6 +14,8 @@ import MapKit
 
 class MapaViewController: UIViewController {
     
+    
+    
     // Pasamos modelo vista
     weak var mapaViewModel: MapaViewModel?
     
@@ -29,6 +31,8 @@ class MapaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.detallesUbicacionView.alpha = 0.7
         
         mapaViewModel?.view = self
         // Ubicacion por defecto
