@@ -41,15 +41,6 @@ class UbicappModel {
     // Ubicacion seleccionada
     @Published var ubicacionSeleccionada: UbicacionEntity?
     
-    /*
-    init() {
-        self.loadUbicaciones()
-    }
-    
-    deinit {
-        self.ubicaciones.removeAll()
-    }
-    */
     // MARK: Funciones que podemos aplicar a nuestro modelo
     // Cargar las ubicaciones desde nuestro contenedor
     func loadUbicaciones() {
@@ -65,8 +56,6 @@ class UbicappModel {
     // Seleccionar una ubicacion
     func seleccionarUbicacion(id: Int) {
         
-        //guard id >= 0 && id < self.ubicaciones.count else { return }
-        
         if let ubicacionSeleccionada = self.ubicaciones.filter({ ubicacion in
             ubicacion.id == Int32(id)
         }).first {
@@ -74,7 +63,6 @@ class UbicappModel {
             self.ubicacionSeleccionada = ubicacionSeleccionada
             
         }
-        
     }
     
     // Agregar una ubicacion
