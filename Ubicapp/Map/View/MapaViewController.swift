@@ -156,7 +156,7 @@ extension MapaViewController: MapaView {
             let latitud = ubicacion.latitud
             let longitud = ubicacion.longitud
             
-            print("Ubicacion: (\(Double(Int(latitud * 1000)) / 1000), \(Double(Int(longitud * 1000)) / 1000 ))")
+            print("Ubicacion: (\(ubicacion.latitud.redondear(numeroDeDecimales: 4)), \(ubicacion.longitud.redondear(numeroDeDecimales: 4))")
             
             mark.coordinate = CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
  
@@ -168,8 +168,10 @@ extension MapaViewController: MapaView {
     
     func ubicacion(ubicacionSeleccionada ubicacion: UbicacionEntity) {
         
-        self.latitudLabel.text = "Lat: \(Double(Int(ubicacion.latitud * 10_000)) / 10_000)"
-        self.longitudLabel.text = "Long: \(Double(Int(ubicacion.longitud * 10_000)) / 10_000)"
+        //self.latitudLabel.text = "Lat: \(Double(Int(ubicacion.latitud * 10_000)) / 10_000)"
+        //self.longitudLabel.text = "Long: \(Double(Int(ubicacion.longitud * 10_000)) / 10_000)"
+        self.latitudLabel.text = "Lat: \(ubicacion.latitud.redondear(numeroDeDecimales: 4))"
+        self.longitudLabel.text = "Long: \(ubicacion.longitud.redondear(numeroDeDecimales: 4))"
         self.nombreUbicacionLabel.text = ubicacion.nombre
         
         pantallaPupOp = !pantallaPupOp
@@ -185,6 +187,16 @@ extension MapaViewController: MapaView {
         } else {
             centerPupUpConstrain.constant = -700
         }
+    }
+}
+
+// Limita el numero de decimales mostrados
+extension Double {
+    func redondear(numeroDeDecimales: Int) -> String {
+        let formateador = NumberFormatter()
+        formateador.maximumFractionDigits = numeroDeDecimales
+        formateador.roundingMode = .down
+        return formateador.string(from: NSNumber(value: self)) ?? ""
     }
 }
 
