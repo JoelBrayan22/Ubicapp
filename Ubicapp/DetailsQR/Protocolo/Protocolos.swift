@@ -11,5 +11,5 @@ import Foundation
 protocol QRView: NSObject {
     func ubicacion(ubicacionSelecionada: UbicacionEntity?)
     func ubicacion(ubicacionActualizada ubicacion: UbicacionEntity?)
-    
 }
+
