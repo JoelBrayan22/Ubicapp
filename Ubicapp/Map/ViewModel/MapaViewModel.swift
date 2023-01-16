@@ -16,10 +16,14 @@ class MapaViewModel {
     
     // Modelo
     weak var model: UbicappModel?
+    
     // Protocolo para notificarle a la vista de algun evento
     weak var view: MapaView?
+    
     // Escucha alguna actualizacion de las ubicaciones desde el modelo
     var ubicacionesSubscriber: AnyCancellable?
+    
+    // Escucha alguna actualizacion de la ubicacion seleccionada desde el modelo
     var ubicacionSeleccionadaSubscriber: AnyCancellable?
     
     // Subscripciones a los cambios que ocupamos
@@ -29,7 +33,7 @@ class MapaViewModel {
         
         // MARK: Funciones para escuchar actualizaciones desde el modelo
         
-        // Escucha cuando todo el arreglo de ubicaciones
+        // Escucha cuando todo el arreglo de ubicaciones se actualiza
         self.ubicacionesSubscriber = model.$ubicaciones.sink(receiveValue: {
             [weak self] ubicaciones in
             
@@ -37,7 +41,7 @@ class MapaViewModel {
             self?.view?.ubicacion(ubicaciones: ubicaciones)
         })
         
-        // Escucha cual es la ubicacion seleccionada
+        // Escucha a la ubicacion selecccionada
         self.ubicacionSeleccionadaSubscriber = model.$ubicacionSeleccionada.sink(receiveValue: {
             [weak self] ubicacion in
             
