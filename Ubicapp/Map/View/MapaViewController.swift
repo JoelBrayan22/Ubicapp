@@ -156,7 +156,7 @@ extension MapaViewController: MapaView {
             let latitud = ubicacion.latitud
             let longitud = ubicacion.longitud
             
-            print("Ubicacion: (\(Double(Int(latitud * 1000)) / 1000), \(Double(Int(longitud * 1000)) / 1000 ))")
+            print("Ubicacion: (\(ubicacion.latitud.redondear(numeroDeDecimales: 4)), \(ubicacion.longitud.redondear(numeroDeDecimales: 4))")
             
             mark.coordinate = CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
  
